@@ -10,7 +10,8 @@ if (isset($_POST["pseudo"], $_POST["email"], $_POST["pass"])) {
     $stmt = $pdo->prepare("INSERT INTO contact (pseudo, email, pass, date_inscription) VALUES (?, ?, ?, ?)");
     $stmt->execute([$pseudo, $email, $pass, $dateinscription]);
     echo "Inscription réussie!";
-} else {
+} 
+else {
     echo "Veuillez remplir tous les champs!";
 }
 ?>
